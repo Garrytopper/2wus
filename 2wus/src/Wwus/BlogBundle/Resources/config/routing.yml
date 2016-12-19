@@ -1,0 +1,4 @@
+wwus_blog_homepage:
+    path:     /
+    defaults:  
+        _controller: WwusBlogBundle:Blog:accueil 

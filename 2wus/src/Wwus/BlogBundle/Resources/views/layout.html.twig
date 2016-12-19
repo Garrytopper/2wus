@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<meta charset='utf-8'>
+			<!-- Cette déclaration ne concerne que le navigateur Internet Explorer. Elle permet de s'assurer qu'il utilise la dernière version du moteur de rendu. -->
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<!-- Cette ligne concerne les mobiles. On demande que l'affichage occupe tout l'espace disponible avec une taill de 1, autrement dit sans zoom -->
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+						<!-- Déclaration du fichier css de bootstrap -->
+			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+			<!-- J'appelle mon fichier css perso, mais il sera intéressant à un moment donné de voir pour modifier directement bootstrap à la source -->
+			<link rel="stylesheet" type="text/css" media='all' href="{{ asset('bundles/wwusblog/css/layout.css')}}">
+			<!-- Les appels qui suivent ont pour objectif de permettre aux navigateurs ne prennt pas en charge HTML5 et les media queries css3 de le faire, en particulier pour IE8 -->
+			<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+			<!--[if lt IE 9]>
+  				<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  				<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<![endif]-->
+			<title>Web With Us</title>
+		</head>
+<!-- *********
+**************
+BODY   *******
+**************
+***********-->		
+		<body>
+
+		<!-- Section d'accueil Mobile *************************************************** -->
+		<section id="section1">
+
+		</section>
+		<!-- Fin de Section d'accueil Mobile ******************************************** -->
+		<!-- Section des articles en avant première ************************************* -->
+		<section id="section2">
+
+		</section>
+		<!-- Fin de Section des articles en avant première ****************************** -->
+		<!-- Section des Citations ****************************************************** -->
+		<section id="section3">
+
+		</section>
+		<!-- Fin de Section des Citations *********************************************** -->
+
+
+
+		<!--*********************************************************************************
+		*************************************************************************************
+
+								****** les appels JavaScript pour jQuery et bootstrap  ******
+
+		*************************************************************************************
+		**********************************************************************************-->
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="{{ asset('bundles/rswblog/js/monJava.js') }}"></script>
+		</body>
+	</html>
