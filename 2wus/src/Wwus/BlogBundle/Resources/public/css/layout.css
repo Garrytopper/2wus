@@ -1,8 +1,45 @@
+body
+{
+
+}
+/********************************/
+/* règles css pour la section 1 */
+/********************************/
 #section1
 {
 	height: 150px;
 	background-color: red;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
+.contenu
+{
+    height: 500px;
+}
+
+#logo_accueil
+{
+    height: 50px;
+}
+
+#tampon_accueil
+{
+    height: 300px;
+}
+
+#description_accueil
+{
+    height: 100px;
+}
+
+.scroll
+{
+    height: 100px;
+}
+/********************************/
+/* règles css pour la section 2 */
+/********************************/
 
 #section2
 {
@@ -10,8 +47,19 @@
 	background-color: yellow;
 }
 
+/********************************/
+/* règles css pour la section 3 */
+/********************************/
+
 #section3
 {
 	height: 150px;
 	background-color: green;
+}
+
+/**  règles qui facilitent mon développement **/
+
+.border
+{
+    border: solid 2px black;
 }
