@@ -4,8 +4,8 @@ parameters:
 #    parameter_name: value
 
 services:
-    wwus_blog.screenSize.Definer:
-        class: Wwus\BlogBundle\screenSize\ScreenSizeDefiner
+   
+
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

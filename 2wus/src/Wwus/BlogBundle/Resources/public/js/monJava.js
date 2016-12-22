@@ -1,8 +1,6 @@
 $(function() {
-    $("#section1").on("click",function(){
-        var X_ecran = document.documentElement.clientWidth;
-        var Y_ecran = document.documentElement.clientHeight;
-        var element = document.activeElement;
-        alert('La largeur de l\'écran est de ' + X_ecran + ' et sa hauteur est de ' + Y_ecran + ' et l\'élément courant est : ' + element);
-    }); 
+    // Code exécuté avant même que la page soit chargée
+    var X = $(window).width();
+    var Y = $(window).height();
+    $('#section1, #section2, #section3').css('height', Y).css('width', '100%');
 });
