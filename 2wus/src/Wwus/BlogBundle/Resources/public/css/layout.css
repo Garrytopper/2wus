@@ -1,16 +1,9 @@
-body
+/***************************************************/
+/* règles css pour le contenu en commun au section */
+/***************************************************/
+.en-tete
 {
-
-}
-/********************************/
-/* règles css pour la section 1 */
-/********************************/
-#section1
-{
-	height: 150px;
-	background-color: red;
-    padding-left: 15px;
-    padding-right: 15px;
+    height: 50px;
 }
 
 .contenu
@@ -18,43 +11,94 @@ body
     height: 500px;
 }
 
-#logo_accueil
-{
-    height: 50px;
-}
-
-#tampon_accueil
-{
-    height: 300px;
-}
-
-#description_accueil
+.pied-de-page
 {
     height: 100px;
 }
 
-.scroll
+.container-fluid
 {
-    height: 100px;
+   padding-right: 0px;
+   padding-left: 0px;
 }
+/********************************/
+/* règles css pour la section 1 */
+/********************************/
+#section1
+{  
+	background-color: red;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+    #image-accueil
+    {
+        /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+        padding-left: 15px;
+    }
+
+
+        #contenu-section1
+        {
+            /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+            padding-left: 15px;
+        }
+
+        #tampon_accueil
+        {
+            height: 300px;
+        }
+
+        #description_accueil
+        {
+            height: 100px;
+        }
+
+ 
 /********************************/
 /* règles css pour la section 2 */
 /********************************/
 
 #section2
 {
-	height: 150px;
 	background-color: yellow;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
+.navigation_accueil
+{
+    height: 50px;
+}
+
+/* la hauteur du carroussel est définit en js dans monJava.js */
+#carroussel
+{
+    height: 150px;
+    /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+    padding-left: 15px;
+}
+
+#liste_article
+{
+    height: 150px;
+    /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+    padding-left: 15px;
+}
+
+#action
+{
+   
+}
 /********************************/
 /* règles css pour la section 3 */
 /********************************/
 
 #section3
 {
-	height: 150px;
 	background-color: green;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /**  règles qui facilitent mon développement **/
