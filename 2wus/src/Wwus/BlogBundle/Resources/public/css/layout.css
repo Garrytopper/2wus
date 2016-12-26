@@ -35,8 +35,20 @@
     {
         /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
         padding-left: 15px;
+        padding-right: 15px;
     }
 
+    .logo-accueil
+    {
+        height: 50px;
+    }
+
+    .section-titre
+    {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
         #contenu-section1
         {
@@ -44,15 +56,15 @@
             padding-left: 15px;
         }
 
-        #tampon_accueil
-        {
-            height: 300px;
-        }
+            #tampon_accueil
+            {
+                height: 300px;
+            }
 
-        #description_accueil
-        {
-            height: 100px;
-        }
+            #description_accueil
+            {
+                height: 100px;
+            }
 
  
 /********************************/
@@ -66,30 +78,37 @@
     padding-right: 15px;
 }
 
-.navigation_accueil
-{
-    height: 50px;
-}
+    .hamburger
+    {
+        height: 2px;
+        width: 7px;
+    }
 
-/* la hauteur du carroussel est définit en js dans monJava.js */
-#carroussel
-{
-    height: 150px;
-    /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
-    padding-left: 15px;
-}
+    #contenu-section2
+    {
+        /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-#liste_article
-{
-    height: 150px;
-    /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
-    padding-left: 15px;
-}
+        /* la hauteur du carroussel est définit en js dans monJava.js */
+        #carroussel
+        {
+            height: 150px;
+            
+        }
 
-#action
-{
-   
-}
+        #liste_article
+        {
+            height: 150px;
+            
+            
+        }
+
+    #action
+    {
+       
+    }
 /********************************/
 /* règles css pour la section 3 */
 /********************************/
