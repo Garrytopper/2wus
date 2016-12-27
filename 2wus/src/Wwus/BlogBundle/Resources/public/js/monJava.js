@@ -10,6 +10,7 @@ $(function() {
     var YenTete = $('.en-tete').height();
     var Ycontenu = Y - YpiedPage - YenTete ;
     $('.contenu').css('height', Ycontenu);
+    $('.menu').css('height', Ycontenu);
     
     // Ensuite je redimenssionne le contenu de la section1 
         var Ydescription = $('#description_accueil').height();
@@ -25,6 +26,18 @@ $(function() {
     $('#carroussel').css('height', Ycarroussel);
     $('#liste_article').css('height', Yliste);
 
+    $('.hamburger').on('click', function(){
+        if ($('.hamburger').hasClass('is-opened')) {
+            $('.hamburger').removeClass('is-opened');
+            $('.menu').addClass('hidden');
+            $('.contenu').removeClass('hidden');
+        }
+        else{
+            $('.hamburger').addClass('is-opened');
+            $('.menu').removeClass('hidden');
+            $('.contenu').addClass('hidden');
+        }
+    });
     
     //***************************************** TEST
     //alert('contenu : '+ Ycontenu +' dont en-tête : '+ YenTete +', et le pied-de-page : '+ YpiedPage);
