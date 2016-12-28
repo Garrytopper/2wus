@@ -10,7 +10,7 @@ $(function() {
     var YenTete = $('.en-tete').height();
     var Ycontenu = Y - YpiedPage - YenTete ;
     $('.contenu').css('height', Ycontenu);
-    $('.menu').css('height', Ycontenu);
+    $('.menu').css('height', Y);
     
     // Ensuite je redimenssionne le contenu de la section1 
         var Ydescription = $('#description_accueil').height();
@@ -26,16 +26,26 @@ $(function() {
     $('#carroussel').css('height', Ycarroussel);
     $('#liste_article').css('height', Yliste);
 
+
+    // Java pour gérer le scroll de la page
+    
+    $(window).scroll(function(event){
+        if ($(window).scrollTop() <= 100) {
+        
+    };
+    })
+    
+
+    // Java pour gérer le menu
     $('.hamburger').on('click', function(){
         if ($('.hamburger').hasClass('is-opened')) {
             $('.hamburger').removeClass('is-opened');
-            $('.menu').addClass('hidden');
-            $('.contenu').removeClass('hidden');
+            $('.menu').fadeOut();
         }
         else{
             $('.hamburger').addClass('is-opened');
-            $('.menu').removeClass('hidden');
-            $('.contenu').addClass('hidden');
+
+            $('.menu').fadeIn();
         }
     });
     
