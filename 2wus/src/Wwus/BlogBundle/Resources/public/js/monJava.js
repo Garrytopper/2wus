@@ -28,13 +28,31 @@ $(function() {
 
 
     // Java pour gérer le scroll de la page
-    
+     
+    var lastScrollTop = 0;
+    var pastScroll = 0;
     $(window).scroll(function(event){
-        if ($(window).scrollTop() <= 100) {
-        
-    };
-    })
-    
+       var scroll = $(this).scrollTop();
+       var mouv = scroll - pastScroll;
+       if (mouv > 0) 
+       { 
+            if (scroll > lastScrollTop + Y/4 &&  scroll < lastScrollTop + Y/3) 
+            {
+                 lastScrollTop = lastScrollTop + Y;
+                 $('html, body').animate({ scrollTop: lastScrollTop}, 'fast');
+            };
+            
+       };
+       if (mouv < 0)
+       {
+            if (scroll < lastScrollTop - Y/4 &&  scroll > lastScrollTop - Y/3) 
+            {
+                 lastScrollTop = lastScrollTop - Y;
+                 $('html, body').animate({ scrollTop: lastScrollTop}, 'fast');
+            };
+       };
+        pastScroll = scroll;       
+    });
 
     // Java pour gérer le menu
     $('.hamburger').on('click', function(){
