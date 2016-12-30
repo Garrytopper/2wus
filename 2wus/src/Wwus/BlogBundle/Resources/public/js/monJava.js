@@ -28,30 +28,43 @@ $(function() {
 
 
     // Java pour gérer le scroll de la page
+    // Ici je souhaite que lorque l'utilisateur scroll vers le bas ou vers le haut, 
+    // la page défile pour se placer correctement en haut d'une section
      
+    // variable qui servira de repère de haut de section
     var lastScrollTop = 0;
+    // variable qui enregistre la position du scroll précedent afin de déterminer en comparaison du scroll actuel : 
+    // le mouvement descendant ou montant de l'utilisateur 
     var pastScroll = 0;
     $(window).scroll(function(event){
        var scroll = $(this).scrollTop();
        var mouv = scroll - pastScroll;
        if (mouv > 0) 
        { 
-            if (scroll > lastScrollTop + Y/4 &&  scroll < lastScrollTop + Y/4 + 20) 
+            if (scroll > lastScrollTop + Y/8 &&  scroll < lastScrollTop + Y/8 + 50) 
             {
                  lastScrollTop = lastScrollTop + Y;
                  $('html, body').animate({ scrollTop: lastScrollTop}, 'slow');
             };
-            
        };
        if (mouv < 0)
        {
-            if (scroll < lastScrollTop - Y/4 &&  scroll > lastScrollTop - Y/4 - 20) 
+            if (scroll < lastScrollTop - Y/8 &&  scroll > lastScrollTop - Y/8 - 50) 
             {
                  lastScrollTop = lastScrollTop - Y;
                  $('html, body').animate({ scrollTop: lastScrollTop}, 'slow');
             };
        };
-        pastScroll = scroll;       
+        pastScroll = scroll;
+        // Maintenant je gère le stick du menu en fonction de la position du scroll 
+        if (scroll >= Y + $('.en-tete').height())
+        {
+            $('#navigation').addClass('sticky');
+        }   
+        else
+        {
+            $('#navigation').removeClass('sticky');
+        }   
     });
 
     // Java pour gérer le menu

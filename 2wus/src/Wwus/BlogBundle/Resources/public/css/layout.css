@@ -34,7 +34,6 @@ html { overflow-y: hidden; }
         z-index: 10;
         display: none;
         color: white;
-
     }
 /********************************/
 /* règles css pour la section 1 */
@@ -96,6 +95,23 @@ html { overflow-y: hidden; }
     padding-left: 15px;
     padding-right: 15px;
 }
+
+    #navigation
+    {
+        background-color: white;
+    }
+
+    .sticky 
+    {
+        position: fixed;
+        width: 100%;
+        left: 15px;
+        top: 0;
+        z-index: 100;
+        border-top: 0;
+        
+
+    }
 
     .hamburger
     {
