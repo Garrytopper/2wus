@@ -36,19 +36,19 @@ $(function() {
        var mouv = scroll - pastScroll;
        if (mouv > 0) 
        { 
-            if (scroll > lastScrollTop + Y/4 &&  scroll < lastScrollTop + Y/3) 
+            if (scroll > lastScrollTop + Y/4 &&  scroll < lastScrollTop + Y/4 + 20) 
             {
                  lastScrollTop = lastScrollTop + Y;
-                 $('html, body').animate({ scrollTop: lastScrollTop}, 'fast');
+                 $('html, body').animate({ scrollTop: lastScrollTop}, 'slow');
             };
             
        };
        if (mouv < 0)
        {
-            if (scroll < lastScrollTop - Y/4 &&  scroll > lastScrollTop - Y/3) 
+            if (scroll < lastScrollTop - Y/4 &&  scroll > lastScrollTop - Y/4 - 20) 
             {
                  lastScrollTop = lastScrollTop - Y;
-                 $('html, body').animate({ scrollTop: lastScrollTop}, 'fast');
+                 $('html, body').animate({ scrollTop: lastScrollTop}, 'slow');
             };
        };
         pastScroll = scroll;       
