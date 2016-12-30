@@ -57,13 +57,15 @@ $(function() {
        };
         pastScroll = scroll;
         // Maintenant je gère le stick du menu en fonction de la position du scroll 
-        if (scroll >= Y + $('.en-tete').height())
+        if (scroll >= Y)
         {
             $('#navigation').addClass('sticky');
+            $('#navigation-tampon').removeClass('hidden');
         }   
         else
         {
             $('#navigation').removeClass('sticky');
+            $('#navigation-tampon').addClass('hidden');
         }   
     });
 
