@@ -1,3 +1,7 @@
+wwus_admin:
+    resource: "@WwusAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 wwus_blog:
     resource: "@WwusBlogBundle/Resources/config/routing.yml"
     prefix:   /

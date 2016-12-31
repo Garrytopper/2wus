@@ -1,0 +1,4 @@
+wwus_admin_homepage:
+    path:     /admin
+    defaults: 
+     _controller: WwusAdminBundle:Admin:index 
