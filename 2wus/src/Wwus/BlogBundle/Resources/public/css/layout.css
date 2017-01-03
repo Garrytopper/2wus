@@ -9,6 +9,12 @@ html { overflow-y: hidden; }
     height: 50px;
 }
 
+section
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .contenu
 {
     height: 500px;
@@ -59,8 +65,6 @@ html { overflow-y: hidden; }
 #section1
 {  
 	background-color: red;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
     #image-accueil
@@ -110,8 +114,6 @@ html { overflow-y: hidden; }
 #section2
 {
 	background-color: yellow;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
     #navigation
@@ -239,8 +241,6 @@ html { overflow-y: hidden; }
 #section3
 {
 	background-color: green;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 /**  règles qui facilitent mon développement **/

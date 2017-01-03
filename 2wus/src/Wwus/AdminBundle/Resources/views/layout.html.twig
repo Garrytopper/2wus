@@ -9,7 +9,7 @@
 						<!-- Déclaration du fichier css de bootstrap -->
 			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 			<!-- J'appelle mon fichier css perso, mais il sera intéressant à un moment donné de voir pour modifier directement bootstrap à la source -->
-			<link rel="stylesheet" type="text/css" media='all' href="{{ asset('bundles/wwusadmin/css/layout.css')}}">
+			<link rel="stylesheet" type="text/css" media='all' href="{{ asset('bundles/wwusblog/css/layout.css')}}">
 			<!-- Les appels qui suivent ont pour objectif de permettre aux navigateurs ne prennt pas en charge HTML5 et les media queries css3 de le faire, en particulier pour IE8 -->
 			<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +26,26 @@ BODY   *******
 ***********-->		
 		<body>
 		<div class="container-fluid ">
-			<p>ici se trouvera ma page d'administration</p>
+			<section>
+				<div class="row en-tete border">
+					<div class="col-xs-4">
+						<img class="logo-accueil" src="{{ asset('bundles/wwusadmin/images/wwus-logo-retour.png')}}">
+					</div>
+					<div class="col-xs-4">
+					</div>
+					<div class="col-xs-4">
+						<div class="hamburger">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="row contenu border">
+					<p>ici se trouvera ma page d'administration</p>
+				</div>
+				<div class="row pied-de-page border">
+				</div>
+			</section>
+			
 
 <!--*********************************************************************************
 *************************************************************************************
