@@ -8,6 +8,6 @@ class ArticleController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('WwusArticleBundle::article.html.twig');
+        return $this->render('WwusArticleBundle::layout.html.twig');
     }
 }

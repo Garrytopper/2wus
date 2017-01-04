@@ -1,3 +1,4 @@
 wwus_article_homepage:
     path:     /article
-    defaults: { _controller: WwusArticleBundle:Article:index }
+    defaults:  
+        _controller: WwusArticleBundle:Article:index 

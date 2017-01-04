@@ -31,7 +31,7 @@ BODY   *******
 				<div class="menu">
 					<ul>
 						{% block menu %}
-							<a href="{{ path('wwus_article_homepage') }}"><li>Article</li></a>
+							<a href="{{ path('wwus_article_homepage') }}"><li>TAGS</li></a>
 						{% endblock %}
 					</ul>
 				</div>	
@@ -39,11 +39,11 @@ BODY   *******
 			<section>
 				<div style="" class="row en-tete">
 					<div class="col-xs-4">
-						<a href="{{ path('wwus_blog_homepage') }}"><img class="logo-accueil" src="{{ asset('bundles/wwusarticle/images/wwus-logo-retour.png')}}"></a>
+						<a href="{{ path('wwus_blog_homepage') }}"><img class="logo-accueil" src="{{ asset('bundles/wwusarticle/image/wwus-logo-retour.png')}}"></a>
 					</div>
 					<div class="col-xs-4 section-titre">
 						{% block titre%}
-							<p>Administration</p>
+							<p>Article</p>
 						{% endblock %}
 					</div>
 					<div class="col-xs-4">
@@ -52,7 +52,7 @@ BODY   *******
 						</div>
 					</div>
 				</div>
-				<div class="row contenu fond-admin">
+				<div class="row contenu fond-contenu">
 					{% block contenu %}
 
 					{% endblock %}

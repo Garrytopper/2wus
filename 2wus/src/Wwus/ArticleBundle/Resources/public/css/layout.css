@@ -1,0 +1,263 @@
+/***************************************************/
+/* règles css pour le contenu en commun au section */
+/***************************************************/
+
+html { overflow-y: hidden; }
+
+.en-tete
+{
+    height: 50px;
+}
+
+section
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contenu
+{
+    height: 500px;
+}
+
+.pied-de-page
+{
+    height: 100px;
+}
+
+.container-fluid
+{
+   padding-right: 0px;
+   padding-left: 0px;
+}
+
+.menu
+    {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        display: none;
+        color: white;
+    }
+    .menu ul
+    {
+        position: absolute;
+        top: 25%;
+        right: 50%;
+        transform: translateX(50%);
+        width: 50%
+    }
+    .menu ul li
+    {
+        font-size: 2em;
+        list-style-type: none;
+        border: 3px solid white;
+        margin-top: 30px;
+        text-align: center;
+        border-radius: 15px;
+
+    }
+/********************************/
+/* règles css pour la section 1 */
+/********************************/
+#section1
+{  
+    background-color: red;
+}
+
+    #image-accueil
+    {
+        /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .logo-accueil
+    {
+        height: 50px;
+        z-index: 20;
+    }
+
+    .section-titre
+    {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+        #contenu-section1
+        {
+            /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+            padding-left: 15px;
+        }
+
+            #tampon_accueil
+            {
+                height: 300px;
+            }
+
+            #description_accueil
+            {
+                height: 100px;
+            }
+
+ 
+/********************************/
+/* règles css pour la section 2 */
+/********************************/
+
+#section2
+{
+    background-color: yellow;
+}
+
+    #navigation
+    {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .sticky 
+    {
+        position: fixed;
+        width: 100%;
+        left: 15px;
+        top: 0;
+        z-index: 100;
+        border-top: 0;
+        
+
+    }
+
+    .hamburger
+    {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        border-radius: 20px;
+        transition: transform 1.5s;
+        z-index: 11;
+    }
+
+        .hamburger span
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            display: block;
+            width: 25px;
+            height: 4px;
+            border-radius: 2px;
+
+            
+            background-color: black;
+            
+        }
+
+        .hamburger span::before, .hamburger span::after
+        {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 4px;
+            border-radius: 2px;
+
+            position: absolute;
+           
+            transform: translateY(-8px);
+
+            background-color: black;
+        }
+
+        .hamburger span::before
+        {
+            transform: translateY(8px);
+        }
+
+        .hamburger.is-opened
+        {
+            transform: rotate(45deg);
+            transition: transform 0.5s;
+            background-color: white;
+
+        }
+
+        .hamburger.is-opened span
+        {
+            background-color: black;
+        }
+
+        .hamburger.is-opened span::before
+        {
+            background-color: black;
+            transform: rotate(0deg);
+            transition: transform 0.5s;
+        }
+
+        .hamburger.is-opened span::after
+        {
+            background-color: black;
+            transform: rotate(90deg);
+            transition: transform 0.5s;
+        }
+
+    #contenu-section2
+    {
+        /* le padding corrige le décalage provoqué quand un .row se trouve dans un .row */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+        /* la hauteur du carroussel est définit en js dans monJava.js */
+        #carroussel
+        {
+            height: 150px;
+            
+        }
+
+        #liste_article
+        {
+            height: 150px;
+            
+            
+        }
+
+    #action
+    {
+       
+    }
+/********************************/
+/* règles css pour la section 3 */
+/********************************/
+
+#section3
+{
+    background-color: green;
+}
+
+/*********************************************/
+/* règles css pour la partie administration  */
+/*********************************************/
+
+.fond-contenu
+{
+    /*background-image: url('../../wwusadmin/images/admin-fond.jpg');
+    background-position: center;
+    background-size: 250%;*/
+    background-color: orange;
+}
+
+/**  règles qui facilitent mon développement **/
+
+.border
+{
+    border: solid 2px black;
+}
