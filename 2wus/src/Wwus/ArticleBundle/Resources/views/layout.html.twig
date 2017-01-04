@@ -9,7 +9,7 @@
 						<!-- Déclaration du fichier css de bootstrap -->
 			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 			<!-- J'appelle mon fichier css perso, mais il sera intéressant à un moment donné de voir pour modifier directement bootstrap à la source -->
-			<link rel="stylesheet" type="text/css" media='all' href="{{ asset('bundles/wwusadmin/css/layout.css')}}">
+			<link rel="stylesheet" type="text/css" media='all' href="{{ asset('bundles/wwusarticle/css/layout.css')}}">
 			<!-- Les appels qui suivent ont pour objectif de permettre aux navigateurs ne prennt pas en charge HTML5 et les media queries css3 de le faire, en particulier pour IE8 -->
 			<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,7 +39,7 @@ BODY   *******
 			<section>
 				<div style="" class="row en-tete">
 					<div class="col-xs-4">
-						<a href="{{ path('wwus_blog_homepage') }}"><img class="logo-accueil" src="{{ asset('bundles/wwusadmin/images/wwus-logo-retour.png')}}"></a>
+						<a href="{{ path('wwus_blog_homepage') }}"><img class="logo-accueil" src="{{ asset('bundles/wwusarticle/images/wwus-logo-retour.png')}}"></a>
 					</div>
 					<div class="col-xs-4 section-titre">
 						{% block titre%}
@@ -87,7 +87,7 @@ BODY   *******
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			<script src="{{ asset('bundles/wwusadmin/js/monJava.js') }}"></script>
+			<script src="{{ asset('bundles/wwusarticle/js/monJava.js') }}"></script>
 		</div>
 		</body>
 	</html>

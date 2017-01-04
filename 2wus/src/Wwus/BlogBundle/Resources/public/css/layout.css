@@ -243,6 +243,17 @@ section
 	background-color: green;
 }
 
+/*********************************************/
+/* règles css pour la partie administration  */
+/*********************************************/
+
+.fond-admin
+{
+    background-image: url('../../wwusadmin/images/admin-fond.jpg');
+    background-position: center;
+    background-size: 250%;
+}
+
 /**  règles qui facilitent mon développement **/
 
 .border

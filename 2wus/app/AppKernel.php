@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Wwus\BlogBundle\WwusBlogBundle(),
             new Wwus\AdminBundle\WwusAdminBundle(),
+            new Wwus\ArticleBundle\WwusArticleBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
