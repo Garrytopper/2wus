@@ -244,15 +244,24 @@ section
 }
 
 /*********************************************/
-/* règles css pour la partie administration  */
+/* règles css pour le pied de page           */
 /*********************************************/
 
-.fond-contenu
+.pied-gauche
 {
-    /*background-image: url('../../wwusadmin/images/admin-fond.jpg');
-    background-position: center;
-    background-size: 250%;*/
-    background-color: orange;
+    height: 100%;
+    text-align: center;
+}
+
+.pied-droite
+{
+    height: 100%;
+    text-align: center;
+}
+
+.img-pied
+{
+    height: 100px;
 }
 
 /**  règles qui facilitent mon développement **/

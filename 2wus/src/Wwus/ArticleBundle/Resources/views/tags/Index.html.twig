@@ -1,0 +1,16 @@
+{% extends "WwusArticleBundle::layout.html.twig" %}
+
+{% block titre %}
+    <p>TAGS</p>
+{% endblock %}
+
+{% block contenu %}
+    <p>Une belle liste de tous les tags déjà enregistré :)</p>
+{% endblock %}
+
+{% block pied %}
+    <div class="col-xs-4 pied-gauche"><a href="{{ path('wwus_article_homepage') }}"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-gauche-retour.png') }} " alt=""></a></div>
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 pied-droite"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-droit-ajout.png') }}"></div>
+
+{% endblock %}

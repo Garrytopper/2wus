@@ -2,3 +2,8 @@ wwus_article_homepage:
     path:     /article
     defaults:  
         _controller: WwusArticleBundle:Article:index 
+
+wwus_tags_index:
+    path:    /article/tags 
+    defaults:
+        _controller: WwusArticleBundle:Tags:index 

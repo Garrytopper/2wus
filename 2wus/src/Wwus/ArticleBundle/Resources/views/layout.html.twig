@@ -31,7 +31,7 @@ BODY   *******
 				<div class="menu">
 					<ul>
 						{% block menu %}
-							<a href="{{ path('wwus_article_homepage') }}"><li>TAGS</li></a>
+							<a href="{{ path('wwus_tags_index') }}"><li>TAGS</li></a>
 						{% endblock %}
 					</ul>
 				</div>	
@@ -42,7 +42,7 @@ BODY   *******
 						<a href="{{ path('wwus_blog_homepage') }}"><img class="logo-accueil" src="{{ asset('bundles/wwusarticle/image/wwus-logo-retour.png')}}"></a>
 					</div>
 					<div class="col-xs-4 section-titre">
-						{% block titre%}
+						{% block titre %}
 							<p>Article</p>
 						{% endblock %}
 					</div>
