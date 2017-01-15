@@ -1,16 +1,30 @@
 {% extends "WwusArticleBundle::layout.html.twig" %}
 
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/wwusarticle/css/tags.css') }}">
+{% endblock %}
+
 {% block titre %}
     <p>TAGS</p>
 {% endblock %}
 
 {% block contenu %}
-    <p>Une belle liste de tous les tags déjà enregistré :)</p>
+    <div class="tampon"></div>
+    {% for tag in tags %}
+        <div class="col-xs-6 vignette">
+            <div class="row"> 
+                <div class="col-xs-6">{{ tag.couleur }} </div>
+                <div class="col-xs-6 palette"> <span></span> </div>
+
+            </div>
+            <div class="row"> {{ tag.categorie }} </div>
+        </div>
+    {% endfor %}
 {% endblock %}
 
 {% block pied %}
     <div class="col-xs-4 pied-gauche"><a href="{{ path('wwus_article_homepage') }}"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-gauche-retour.png') }} " alt=""></a></div>
     <div class="col-xs-4"></div>
-    <div class="col-xs-4 pied-droite"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-droit-ajout.png') }}"></div>
+    <div class="col-xs-4 pied-droite"><a href="{{ path('wwus_tags_new') }}"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-droit-ajout.png') }}"></a></div>
 
 {% endblock %}

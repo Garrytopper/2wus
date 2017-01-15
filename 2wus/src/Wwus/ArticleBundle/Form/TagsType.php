@@ -5,6 +5,8 @@ namespace Wwus\ArticleBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class TagsType extends AbstractType
 {
@@ -13,7 +15,10 @@ class TagsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('couleur')->add('catégorie')        ;
+        $builder->add('couleur', TextType::class)
+                ->add('categorie', TextType::class)   
+                ->add('enregister', SubmitType::class)    
+                ;
     }
     
     /**

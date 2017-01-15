@@ -1,0 +1,19 @@
+{% extends 'WwusArticleBundle::layout.html.twig'%}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/wwusarticle/css/tags.css') }}">
+{% endblock %}
+
+{% block titre %}
+    <p>Nouveau TAG</p>
+{% endblock %}
+
+{% block contenu %}
+    {{ form(form) }}
+{% endblock %}
+
+{% block pied %}
+    <div class="col-xs-4 pied-gauche"><a href="{{ path('wwus_article_homepage') }}"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-gauche-retour.png') }} " alt=""></a></div>
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 pied-droite"></div>
+
+{% endblock %}

@@ -33,7 +33,7 @@ class Tags
      *
      * @ORM\Column(name="catégorie", type="string", length=255, unique=true)
      */
-    private $catégorie;
+    private $categorie;
 
 
     /**
@@ -77,9 +77,9 @@ class Tags
      *
      * @return Tags
      */
-    public function setCatégorie($catégorie)
+    public function setCategorie($categorie)
     {
-        $this->catégorie = $catégorie;
+        $this->categorie = $categorie;
 
         return $this;
     }
@@ -89,9 +89,9 @@ class Tags
      *
      * @return string
      */
-    public function getCatégorie()
+    public function getCategorie()
     {
-        return $this->catégorie;
+        return $this->categorie;
     }
 }
 

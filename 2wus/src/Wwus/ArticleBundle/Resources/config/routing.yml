@@ -6,4 +6,9 @@ wwus_article_homepage:
 wwus_tags_index:
     path:    /article/tags 
     defaults:
-        _controller: WwusArticleBundle:Tags:index 
+        _controller: WwusArticleBundle:Tags:index
+
+wwus_tags_new:
+    path:    /article/tags/new 
+    defaults:
+        _controller: WwusArticleBundle:Tags:new 
