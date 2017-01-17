@@ -12,3 +12,8 @@ wwus_tags_new:
     path:    /article/tags/new 
     defaults:
         _controller: WwusArticleBundle:Tags:new 
+
+wwus_tags_modif:
+    path:    /article/tags/modif/{id}
+    defaults:
+        _controller: WwusArticleBundle:Tags:modif

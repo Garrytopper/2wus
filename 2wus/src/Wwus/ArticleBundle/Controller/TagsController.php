@@ -30,4 +30,20 @@ class TagsController extends Controller
         }
         return $this->render('WwusArticleBundle:Tags:new.html.twig', array('form' => $form->createView()));
     }
+
+    public function modifAction(Request $Request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $tagModif = $em->getRepository('WwusArticleBundle:Tags')->find($id);
+        $form = $this->get('form.factory')->create(TagsType::class, $tagModif);
+        if ($Request->isMethod('POST')) {
+            $form->handleRequest($Request);
+            if ($form->isValid()) {
+                $em->persist($tagModif);
+                $em->flush();
+                return $this->redirectToRoute('wwus_tags_index');
+            }
+        }
+        return $this->render('WwusArticleBundle:Tags:modif.html.twig', array('form' => $form->createView()));
+    }
 }

@@ -24,7 +24,7 @@ class Tags
     /**
      * @var string
      *
-     * @ORM\Column(name="couleur", type="string", length=5, unique=true)
+     * @ORM\Column(name="couleur", type="string", length=25, unique=true)
      */
     private $couleur;
 
@@ -94,4 +94,3 @@ class Tags
         return $this->categorie;
     }
 }
-

@@ -11,14 +11,12 @@
 {% block contenu %}
     <div class="tampon"></div>
     {% for tag in tags %}
-        <div class="col-xs-6 vignette">
-            <div class="row"> 
-                <div class="col-xs-6">{{ tag.couleur }} </div>
-                <div class="col-xs-6 palette"> <span></span> </div>
-
+        <a href="{{ path('wwus_tags_modif', { 'id': tag.id }) }}">
+            <div class="col-xs-6 vignette">
+                <div class="row"> {{ tag.couleur }} </div>
+                <div class="row"> {{ tag.categorie }} </div>
             </div>
-            <div class="row"> {{ tag.categorie }} </div>
-        </div>
+        </a>
     {% endfor %}
 {% endblock %}
 
