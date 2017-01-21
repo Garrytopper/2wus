@@ -45,4 +45,10 @@ class TagsController extends Controller
         }
         return $this->render('WwusArticleBundle:Tags:modif.html.twig', array('form' => $form->createView()));
     }
+
+    public function suppAction($tag)
+    {
+        return $this->render('WwusArticleBundle:Tags:supp.html.twig', array('tag' => $tag));
+    }
+
 }

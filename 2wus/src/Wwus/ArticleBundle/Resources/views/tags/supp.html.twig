@@ -1,0 +1,16 @@
+{% extends 'WwusArticleBundle::layout.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/wwusarticle/css/tags.css') }}">
+{% endblock %}
+
+{% block titre %}
+    <p>Suppression TAG</p>
+{% endblock %}
+
+{% block body %}
+    <div class="row body_supp">
+        <div class="row">Êtes-vous sûre de vouloir supprimer le tag :</div>
+        <div class="row">{{ tag.categorie }} : {{ tag.couleur }}</div>
+    </div>
+{% endblock %}

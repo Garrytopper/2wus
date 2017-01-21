@@ -17,3 +17,8 @@ wwus_tags_modif:
     path:    /article/tags/modif/{id}
     defaults:
         _controller: WwusArticleBundle:Tags:modif
+
+wwus_tags_supp:
+    path:    /article/tags/supp/{id}
+    defaults:
+        _controller: WwusArticleBundle:Tags:supp 
