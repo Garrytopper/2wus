@@ -39,7 +39,6 @@ class TagsController extends Controller
         if ($Request->isMethod('POST')) {
             $form->handleRequest($Request);
             if ($form->isValid()) {
-                $em->persist($tagModif);
                 $em->flush();
                 return $this->redirectToRoute('wwus_tags_index');
             }
