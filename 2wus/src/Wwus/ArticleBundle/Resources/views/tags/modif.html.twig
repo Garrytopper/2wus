@@ -16,6 +16,6 @@
 {% block pied %}
     <div class="col-xs-4 pied-gauche"><a href="{{ path('wwus_tags_index') }}"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-gauche-retour.png') }} " alt=""></a></div>
     <div class="col-xs-4"></div>
-    <div class="col-xs-4 pied-droite"><a href="{{ path('wwus_tags_supp', {'tag': tag})}}"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-droit-supp.png') }}"></a></div>
+    <div class="col-xs-4 pied-droite"><a href="{{ path('wwus_tags_supp', {'id': id})}}"><img class="img-pied" src="{{ asset('bundles/wwusarticle/image/pied-droit-supp.png') }}"></a></div>
 
 {% endblock %}

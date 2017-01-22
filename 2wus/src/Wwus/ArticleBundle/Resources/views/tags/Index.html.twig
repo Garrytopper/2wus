@@ -9,7 +9,11 @@
 {% endblock %}
 
 {% block contenu %}
-    <div class="tampon"></div>
+    <div class="tampon">
+        {% for message in app.session.flashbag.get('info') %}
+            <div class="alert alert-success center">{{ message }}</div>
+        {% endfor %}
+    </div>
     {% for tag in tags %}
         <a href="{{ path('wwus_tags_modif', { 'id': tag.id }) }}">
             <div class="col-xs-6 vignette">
