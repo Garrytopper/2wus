@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/wwusexercice/css/test.css')}}">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<title>Test</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('wwus_advert_index') }}"><div class="col-xs-4 advert">Advert</div></a>
+				<a href="{{ path('wwus_application_index')}}"><div class="col-xs-4 application">Application</div></a>
+				<a href="{{ path('wwus_skill_index')}}"><div class="col-xs-4 skill">Skill</div></a>
+			</div>
+			<div class="row"> 
+				<div class="col-xs-12 titre">{% block titre %} {% endblock %}</div>
+			</div>
+		</div>
+		{% block body %}
+		{% endblock %}
+	</body>
+</html>

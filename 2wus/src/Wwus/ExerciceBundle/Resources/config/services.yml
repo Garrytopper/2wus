@@ -1,0 +1,4 @@
+services:
+#    wwus_exercice.example:
+#        class: Wwus\ExerciceBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

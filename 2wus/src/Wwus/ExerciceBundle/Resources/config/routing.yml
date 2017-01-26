@@ -1,0 +1,64 @@
+wwus_exercice_homepage:
+    path:     /exercice
+    defaults: 
+         _controller: WwusExerciceBundle:Exercice:index 
+
+wwus_advert_index:
+    path:    /exercice/advert
+    defaults:
+        _controller: WwusExerciceBundle:Advert:index
+
+wwus_advert_new:
+    path:    /exercice/advert/new 
+    defaults:
+        _controller: WwusExerciceBundle:Advert:new
+
+wwus_advert_modif:
+    path:    /exercice/advert/modif/{id}
+    defaults:   
+        _controller: WwusExerciceBundle:Advert:modif 
+
+wwus_advert_supp:
+    path:    /exercice/advert/supp/{id}
+    defaults:
+        _controller: WwusExerciceBundle:Advert:supp 
+
+wwus_application_index:
+    path:    /exercice/application
+    defaults:
+        _controller: WwusExerciceBundle:Application:index
+
+wwus_application_new:
+    path:    /exercice/application/new 
+    defaults:
+        _controller: WwusExerciceBundle:Application:new
+
+wwus_application_modif:
+    path:    /exercice/application/modif/{id}
+    defaults:   
+        _controller: WwusExerciceBundle:Application:modif 
+
+wwus_application_supp:
+    path:    /exercice/application/supp/{id}
+    defaults:
+        _controller: WwusExerciceBundle:Application:supp 
+
+wwus_skill_index:
+    path:    /exercice/skill
+    defaults:
+        _controller: WwusExerciceBundle:Skill:index
+
+wwus_skill_new:
+    path:    /exercice/skill/new 
+    defaults:
+        _controller: WwusExerciceBundle:Skill:new
+
+wwus_skill_modif:
+    path:    /exercice/skill/modif/{id}
+    defaults:   
+        _controller: WwusExerciceBundle:Skill:modif 
+
+wwus_skill_supp:
+    path:    /exercice/skill/supp/{id}
+    defaults:
+        _controller: WwusExerciceBundle:Skill:supp 
