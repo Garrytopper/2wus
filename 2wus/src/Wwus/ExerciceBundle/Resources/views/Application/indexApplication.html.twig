@@ -9,8 +9,8 @@
 	<div class="tampon"></div>
 {% for application in applications %}
 	<div class="row">
-		<a href="{{ path('wwus_advert_modif', {'id': application.id} )}}"><div class="col-xs-offset-1 col-xs-9 intitule">Candidature n°{{ application.id }} : {{ application.motivation}}</div></a>
-		<a href="{{ path('wwus_advert_supp', {'id': application.id} )}}"><div class="col-xs-1 btn btn-danger">Supp</div></a>
+		<a href="{{ path('wwus_application_modif', {'id': application.id} )}}"><div class="col-xs-offset-1 col-xs-9 intitule">Candidature n°{{ application.id }} : {{ application.motivation}}</div></a>
+		<a href="{{ path('wwus_application_supp', {'id': application.id} )}}"><div class="col-xs-1 btn btn-danger">Supp</div></a>
 	</div>
 {% endfor %}
 	<div class="tampon"></div>
