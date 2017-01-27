@@ -62,3 +62,8 @@ wwus_skill_supp:
     path:    /exercice/skill/supp/{id}
     defaults:
         _controller: WwusExerciceBundle:Skill:supp 
+
+wwus_advertSkill_new:
+    path:    /exercice/advertSkill/new
+    defaults: 
+        _controller: WwusExerciceBundle:Advert_skill:new

@@ -19,6 +19,13 @@
 	text-align: center;
 }
 
+.advertSkill
+{
+	border: 3px solid black;
+	background-color: blue;
+	text-align: center;
+}
+
 .titre
 {
 	border-bottom: 5px solid black;
