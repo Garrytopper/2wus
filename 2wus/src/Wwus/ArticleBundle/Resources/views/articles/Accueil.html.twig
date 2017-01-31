@@ -1,0 +1,29 @@
+{% extends 'WwusArticleBundle::layout.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/wwusarticle/css/Accueil.css') }}">
+{% endblock %}
+
+{% block script %}
+    <script  src="{{ asset('bundles/wwusarticle/js/Accueil.js')}} "></script>
+{% endblock %}
+
+{% block contenu %}
+    <div class='row accueil_article_menu'>
+        <a href="{{ path('wwus_article_new') }}"><div id="" class='col-xs-offset-3 col-xs-6 btn btn-primary bouton'> 
+          New
+        </div></a>
+         
+    </div>
+    <div class='row accueil_article_menu'>
+        <a href="{{ path('wwus_article_brouillons') }}">
+        <div class='col-xs-offset-3 col-xs-6 btn btn-primary bouton'>
+            Brouillons
+        </div></a>
+    </div>
+    <div class='row accueil_article_menu'>
+        <div class='col-xs-offset-3 col-xs-6  btn btn-primary bouton'>
+            Mes Publications
+        </div>
+    </div>
+{% endblock %}

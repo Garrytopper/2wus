@@ -1,0 +1,14 @@
+{% extends 'WwusArticleBundle::layout.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/wwusarticle/css/new1.css') }}">
+{% endblock %}
+
+{% block contenu %}
+    <div id="formulaire" class="col-xs-offset-1 col-xs-10">
+        {{ form(form1) }}
+    </div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

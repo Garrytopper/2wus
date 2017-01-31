@@ -3,6 +3,16 @@ wwus_article_homepage:
     defaults:  
         _controller: WwusArticleBundle:Article:index 
 
+wwus_article_new:
+    path:    /article/new
+    defaults:
+        _controller: WwusArticleBundle:Article:new
+
+wwus_article_brouillons:
+    path:    /article/brouillons 
+    defaults:
+        _controller: WwusArticleBundle:Article:brouillons
+
 wwus_tags_index:
     path:    /article/tags 
     defaults:

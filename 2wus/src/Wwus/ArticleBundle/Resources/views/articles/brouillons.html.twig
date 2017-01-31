@@ -1,0 +1,15 @@
+{% extends 'WwusArticleBundle::layout.html.twig' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/wwusarticle/css/brouillons.css')}}">
+{% endblock %}
+
+{% block contenu %}
+    {% for brouillon in brouillons %}
+        <div class="tampon"></div>
+        <div class="col-xs-offset-1 col-xs-3 center">{{ brouillon.dateCreation|date('d/m/y') }}</div>
+        <div class="col-xs-6">{{ brouillon.titre }}</div>
+    {% endfor %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
