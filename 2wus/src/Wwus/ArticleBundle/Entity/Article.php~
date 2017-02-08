@@ -45,10 +45,16 @@ class Article
     */
     private $publication;
 
+    /**
+    * @ORM\ManyToMany(targetEntity="Wwus\ArticleBundle\Entity\Tags", cascade={"persist"})
+    * @ORM\JoinTable(name="wwus_articles_tags")
+    */
+    private $tags;
+
     public function __construct()
     {
         $this->dateCreation = new \DateTime('now');
-        $this->publication = true;
+        $this->publication = false;
     }
 
     /**

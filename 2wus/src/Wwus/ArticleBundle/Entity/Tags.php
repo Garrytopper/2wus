@@ -35,7 +35,6 @@ class Tags
      */
     private $categorie;
 
-
     /**
      * Get id
      *

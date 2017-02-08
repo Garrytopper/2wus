@@ -45,6 +45,12 @@ class Article
     */
     private $publication;
 
+    /**
+    * @ORM\ManyToMany(targetEntity="Wwus\ArticleBundle\Entity\Tags", cascade={"persist"})
+    * @ORM\JoinTable(name="wwus_articles_tags")
+    */
+    private $tags;
+
     public function __construct()
     {
         $this->dateCreation = new \DateTime('now');
@@ -155,5 +161,39 @@ class Article
     public function getPublication()
     {
         return $this->publication;
+    }
+
+    /**
+     * Add tag
+     *
+     * @param \Wwus\ArticleBundle\Entity\Tags $tag
+     *
+     * @return Article
+     */
+    public function addTag(\Wwus\ArticleBundle\Entity\Tags $tag)
+    {
+        $this->tags[] = $tag;
+
+        return $this;
+    }
+
+    /**
+     * Remove tag
+     *
+     * @param \Wwus\ArticleBundle\Entity\Tags $tag
+     */
+    public function removeTag(\Wwus\ArticleBundle\Entity\Tags $tag)
+    {
+        $this->tags->removeElement($tag);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTags()
+    {
+        return $this->tags;
     }
 }
