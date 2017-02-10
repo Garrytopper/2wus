@@ -97,45 +97,4 @@ class Tags
     {
         return $this->categorie;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add article
-     *
-     * @param \Wwus\ArticleBundle\Entity\Article $article
-     *
-     * @return Tags
-     */
-    public function addArticle(\Wwus\ArticleBundle\Entity\Article $article)
-    {
-        $this->articles[] = $article;
-
-        return $this;
-    }
-
-    /**
-     * Remove article
-     *
-     * @param \Wwus\ArticleBundle\Entity\Article $article
-     */
-    public function removeArticle(\Wwus\ArticleBundle\Entity\Article $article)
-    {
-        $this->articles->removeElement($article);
-    }
-
-    /**
-     * Get articles
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getArticles()
-    {
-        return $this->articles;
-    }
 }

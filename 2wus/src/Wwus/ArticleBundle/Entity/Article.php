@@ -46,8 +46,8 @@ class Article
     private $publication;
 
     /**
-    * @ORM\ManyToMany(targetEntity="Wwus\ArticleBundle\Entity\Tags", cascade={"persist"})
-    * @ORM\JoinTable(name="wwus_articles_tags")
+    * @ORM\ManyToMany(targetEntity="Wwus\ArticleBundle\Entity\Tags", cascade={"persist"}, inversedBy="articles")
+    * @ORM\JoinTable(name="article_tags")
     */
     private $tags;
 
