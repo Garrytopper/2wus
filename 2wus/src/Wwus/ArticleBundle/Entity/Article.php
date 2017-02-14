@@ -173,6 +173,7 @@ class Article
     public function addTag(\Wwus\ArticleBundle\Entity\Tags $tag)
     {
         $this->tags[] = $tag;
+        $tag->addArticle($this);
 
         return $this;
     }
