@@ -19,14 +19,16 @@ class ArticleController extends Controller
 
     public function newAction(Request $request)
     {
-        $article = new Article();
         $em = $this->getDoctrine()->getManager();
-        $form1 = $this->get('form.factory')->createBuilder(FormType::class, $article)
+        $article = new Article();
+        $tagsRepository = $em->getRepository('WwusArticleBundle:Tags')->findAll();
+        
+
+        $formArticle1 = $this->get('form.factory')->createBuilder(FormType::class, $article)
                                                 ->add('Titre', TextType::class)
-                                                ->add('Accroche', TextareaType::class)
-                                                ->add('Commencer', SubmitType::class)
                                                 ->getForm()
                                                 ;
+
         if ($request->isMethod('POST')) {
             $form1->handleRequest($request);
             if ($form1->isValid()) {
@@ -35,7 +37,7 @@ class ArticleController extends Controller
                 return $this->redirectToRoute('wwus_article_homepage');
             }
         }
-        return $this->render('WwusArticleBundle:articles:new1.html.twig', array('form1' => $form1->createView()));
+        return $this->render('WwusArticleBundle:articles:new1.html.twig', array('form1' => $formArticle->createView(), 'tags' => $tagsRepository));
     }
 
     public function brouillonsAction()

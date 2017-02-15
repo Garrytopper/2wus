@@ -5,9 +5,15 @@
 {% endblock %}
 
 {% block contenu %}
-    <div id="formulaire" class="col-xs-offset-1 col-xs-10">
-        {{ form(form1) }}
-    </div>
+	<form method="post" action="{{ path('wwus_article_new')}}">
+		<label for="titre">Choisissez le titre de votre article</label><input type="text" name="titre" id="titre">
+	    
+	    	{% for tag in tags %}
+	    		<div>
+	    			{{ tag.categorie }}
+	    		</div>    	
+	    	{% endfor %}
+	</form>
 {% endblock %}
 
 {% block script %}

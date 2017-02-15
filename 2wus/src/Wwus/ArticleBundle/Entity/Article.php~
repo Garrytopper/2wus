@@ -41,13 +41,14 @@ class Article
     private $accroche;
 
     /**
-    * @ORM\Column(name="publication", type="boolean", nullable=false)
+    * @ORM\Column(name="publication", type="boolean")
     */
     private $publication;
 
     /**
     * @ORM\ManyToMany(targetEntity="Wwus\ArticleBundle\Entity\Tags", cascade={"persist"}, inversedBy="articles")
     * @ORM\JoinTable(name="article_tags")
+    * @ORM\JoinColumn(nullable=false)
     */
     private $tags;
 
@@ -173,6 +174,7 @@ class Article
     public function addTag(\Wwus\ArticleBundle\Entity\Tags $tag)
     {
         $this->tags[] = $tag;
+        $tag->addArticle($this);
 
         return $this;
     }
