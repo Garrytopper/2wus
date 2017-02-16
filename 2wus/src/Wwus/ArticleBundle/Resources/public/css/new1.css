@@ -2,3 +2,27 @@
 {
     margin-top: 100px;
 }
+
+.center
+{
+	text-align: center;
+}
+
+.tampon
+{
+	margin-top: 100px;
+}
+
+#categorieContenant
+{
+	height: 150px;
+	overflow: scroll;
+	
+}
+
+.tags
+{
+	font-size: 1.5em;
+	margin-bottom: 15px;
+}
+

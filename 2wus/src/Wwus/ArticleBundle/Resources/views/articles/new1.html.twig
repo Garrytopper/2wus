@@ -6,15 +6,41 @@
 
 {% block contenu %}
 	<form method="post" action="{{ path('wwus_article_new')}}">
-		<label for="titre">Choisissez le titre de votre article</label><input type="text" name="titre" id="titre">
-	    
-	    	{% for tag in tags %}
-	    		<div>
-	    			{{ tag.categorie }}
-	    		</div>    	
-	    	{% endfor %}
+	<!-- Première partie du formulaire pour la création d'un article : Titre de l'article -->	
+		<div class="row" id="firstForm">
+			<div class="col-xs-12 tampon"></div>
+			<div class="col-xs-12 center">
+				<label for="titre">Titre de l'article</label>
+			</div>
+			<div class="col-xs-12 center">
+				<textarea  name="titre" id="titre" maxlenght="50" rows="3" cols="50"></textarea>
+			</div>
+			<div class="col-xs-12 tampon"></div>
+			<div class="col-xs-offset-1 col-xs-10">
+				<p>Choisissez bien le titre de votre article, il doit être claire et ne pas comprendre plus d'une cinquantaine de caractère. Soyez accrocheur car c'est ce qui donnera envie de lire votre accroche</p>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 center">
+					<div class="btn btn-info" id="suivantFirst">Suivant</div>
+				</div>
+			</div>
+
+		</div>	
+	<!-- Deuxième partie du formulaire pour la création d'un article : Choix des Tags de l'article -->
+		<div class="row hidden" id="secondForm">
+			<div class="col-xs-12 tampon"></div>
+			<div class="col-xs-offset-1 col-xs-10" id="categorieContenant">
+		    	{% for tag in tags %}
+		    		<div class="col-xs-6">
+		    			<input type="checkbox" name="{{ tag.categorie }}" id="{{ tag.categorie }}"/>
+		    			<label for="{{ tag.categorie }}" class="tags">{{ tag.categorie }}</label>
+		    		</div>    	
+		    	{% endfor %}
+		    </div>
+	    </div>
 	</form>
 {% endblock %}
 
 {% block script %}
+	<script src="{{asset('bundles/wwusarticle/js/new1.js')}}"></script>
 {% endblock %}

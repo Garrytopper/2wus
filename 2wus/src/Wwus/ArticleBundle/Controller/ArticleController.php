@@ -37,7 +37,7 @@ class ArticleController extends Controller
                 return $this->redirectToRoute('wwus_article_homepage');
             }
         }
-        return $this->render('WwusArticleBundle:articles:new1.html.twig', array('form1' => $formArticle->createView(), 'tags' => $tagsRepository));
+        return $this->render('WwusArticleBundle:articles:new1.html.twig', array('tags' => $tagsRepository));
     }
 
     public function brouillonsAction()
