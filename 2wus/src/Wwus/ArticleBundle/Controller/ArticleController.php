@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ArticleController extends Controller
 {
@@ -22,21 +23,12 @@ class ArticleController extends Controller
         $em = $this->getDoctrine()->getManager();
         $article = new Article();
         $tagsRepository = $em->getRepository('WwusArticleBundle:Tags')->findAll();
-        
-
-        $formArticle1 = $this->get('form.factory')->createBuilder(FormType::class, $article)
-                                                ->add('Titre', TextType::class)
-                                                ->getForm()
-                                                ;
-
         if ($request->isMethod('POST')) {
-            $form1->handleRequest($request);
-            if ($form1->isValid()) {
-                $em->persist($article);
-                $em->flush();
-                return $this->redirectToRoute('wwus_article_homepage');
+            $titre = $request->request->get('titre');
+            $response = new Response();
+            $response->setContent($titre);
+            return $response;
             }
-        }
         return $this->render('WwusArticleBundle:articles:new1.html.twig', array('tags' => $tagsRepository));
     }
 

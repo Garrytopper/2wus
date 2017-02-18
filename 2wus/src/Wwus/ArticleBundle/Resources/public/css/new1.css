@@ -15,14 +15,14 @@
 
 #categorieContenant
 {
-	height: 150px;
+	height: 350px;
 	overflow: scroll;
 	
 }
 
 .tags
 {
-	font-size: 1.5em;
-	margin-bottom: 15px;
+	font-size: 1.3em;
+	margin-bottom: 25px;
 }
 

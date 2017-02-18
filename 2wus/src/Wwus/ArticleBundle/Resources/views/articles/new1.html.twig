@@ -19,11 +19,10 @@
 			<div class="col-xs-offset-1 col-xs-10">
 				<p>Choisissez bien le titre de votre article, il doit être claire et ne pas comprendre plus d'une cinquantaine de caractère. Soyez accrocheur car c'est ce qui donnera envie de lire votre accroche</p>
 			</div>
-			<div class="row">
-				<div class="col-xs-12 center">
-					<div class="btn btn-info" id="suivantFirst">Suivant</div>
-				</div>
+			<div class="col-xs-12 center">
+				<div class="btn btn-info" id="suivantFirst">Suivant</div>
 			</div>
+			
 
 		</div>	
 	<!-- Deuxième partie du formulaire pour la création d'un article : Choix des Tags de l'article -->
@@ -32,10 +31,15 @@
 			<div class="col-xs-offset-1 col-xs-10" id="categorieContenant">
 		    	{% for tag in tags %}
 		    		<div class="col-xs-6">
-		    			<input type="checkbox" name="{{ tag.categorie }}" id="{{ tag.categorie }}"/>
-		    			<label for="{{ tag.categorie }}" class="tags">{{ tag.categorie }}</label>
+		    			<input type="checkbox" name="{{ tag.id }}" id="{{ tag.id }}"/>
+		    			<label for="{{ tag.id }}" class="tags">{{ tag.categorie }}</label>
 		    		</div>    	
 		    	{% endfor %}
+		    </div>
+		    <div class="tampon col-xs-1Z"></div>
+		    <div class="row">
+		    	<div class="col-xs-offset-2 col-xs-2 btn btn-info" id="retourSecond">Retour</div>
+		    	<button class="col-xs-offset-4 col-xs-2 btn btn-info" id="suivantSecond">Suivant</button>
 		    </div>
 	    </div>
 	</form>
